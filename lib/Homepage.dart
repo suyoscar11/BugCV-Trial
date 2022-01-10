@@ -6,17 +6,11 @@ class Homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          backgroundColor: Colors.white,
-          title: const Center(
-            child: Text('Welcome',
-                style: TextStyle(
-                    backgroundColor: Colors.orange,
-                    fontSize: 70,
-                    fontWeight: FontWeight.bold)),
-          )),
-      body: Column(
-        children: const [SizedBox()],
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('asset/images/Moon.jpg'), fit: BoxFit.cover),
+        ),
       ),
     );
   }

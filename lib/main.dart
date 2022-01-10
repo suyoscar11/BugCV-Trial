@@ -27,23 +27,17 @@ class _LoginDemoState extends State<LoginDemo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: Color(19),
-        title: const Center(child: Text("Throctor")),
-      ),
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.only(top: 60.0),
-              child: Center(
-                child: Container(
-                    width: 200,
-                    height: 150,
-                    child: Image.asset('asset/images/Logo.png')),
-              ),
-            ),
+                padding: const EdgeInsets.only(top: 60.0),
+                child: Center(
+                    child: Container(
+                  width: 200,
+                  height: 150,
+                  child: Image.asset('asset/images/Logo.png'),
+                ))),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 15),
               child: TextField(
@@ -79,7 +73,8 @@ class _LoginDemoState extends State<LoginDemo> {
               height: 50,
               width: 250,
               decoration: BoxDecoration(
-                  color: Colors.black, borderRadius: BorderRadius.circular(20)),
+                  color: Colors.blueGrey,
+                  borderRadius: BorderRadius.circular(20)),
               child: TextButton(
                 onPressed: () {
                   Navigator.push(context,
