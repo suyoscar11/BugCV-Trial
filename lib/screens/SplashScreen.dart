@@ -1,5 +1,4 @@
 import 'package:finance_app/screens/LoginDemo.dart';
-import 'package:finance_app/screens/Menu.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -17,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   _navigatetohome() async {
-    await Future.delayed(Duration(seconds: 2), () {});
+    await Future.delayed(Duration(seconds: 3), () {});
     Navigator.pushReplacement(
         context, MaterialPageRoute(builder: (context) => LoginDemo()));
   }
@@ -36,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 child: Image.asset('asset/images/Logo2.png')),
             Container(
               child: const Text(
-                ' Splash Screen',
+                '',
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
             ),
