@@ -1,24 +1,23 @@
-// ignore: file_names
-
 import 'package:flutter/material.dart';
+import 'DoctorHomePage.dart';
 
-import 'Homepage.dart';
-
-class SignUp extends StatefulWidget {
-  const SignUp({Key? key}) : super(key: key);
+class DoctorScreen extends StatefulWidget {
+  const DoctorScreen({Key? key}) : super(key: key);
 
   @override
-  _SignUpState createState() => _SignUpState();
+  _DoctorScreenState createState() => _DoctorScreenState();
 }
 
-class _SignUpState extends State<SignUp> {
+class _DoctorScreenState extends State<DoctorScreen> {
+  bool Male = false;
+  bool Female = false;
   final _formkey = GlobalKey<FormState>();
 
   final firstNameEditingController = TextEditingController();
   final secondNameEditingController = TextEditingController();
   final emailEditingController = TextEditingController();
   final passwordEditingController = TextEditingController();
-  final confirmPasswordEditingController = TextEditingController();
+  final phoneNumberEditingController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -97,11 +96,11 @@ class _SignUpState extends State<SignUp> {
     //confirm password field
     final confirmpasswordField = TextFormField(
       autofocus: false,
-      controller: confirmPasswordEditingController,
+      controller: phoneNumberEditingController,
       obscureText: true,
       //Validator: (){},
       onSaved: (value) {
-        confirmPasswordEditingController.text = 'value';
+        phoneNumberEditingController.text = 'value';
       },
       textInputAction: TextInputAction.done,
       decoration: const InputDecoration(
@@ -109,7 +108,7 @@ class _SignUpState extends State<SignUp> {
           contentPadding: EdgeInsets.fromLTRB(20, 15, 20, 15),
           prefixIconColor: Colors.red,
           border: OutlineInputBorder(),
-          hintText: 'Confirm Password '),
+          hintText: 'Phone Number '),
     );
     //login button field
 
@@ -141,7 +140,7 @@ class _SignUpState extends State<SignUp> {
                     SizedBox(
                         height: 200,
                         child: Image.asset(
-                          "asset/images/Logo2.png",
+                          "asset/images/Littman.jpg",
                           fit: BoxFit.contain,
                         )),
                     const SizedBox(height: 45),
@@ -154,6 +153,9 @@ class _SignUpState extends State<SignUp> {
                     passwordNameField,
                     const SizedBox(height: 20),
                     confirmpasswordField,
+                    const SizedBox(
+                      height: 20,
+                    ),
                     const SizedBox(height: 45),
                     Container(
                       height: 50,
@@ -166,7 +168,7 @@ class _SignUpState extends State<SignUp> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (_) => const Homepage()));
+                                  builder: (_) => const DoctorHomePage()));
                         },
                         child: const Text(
                           'Login',
