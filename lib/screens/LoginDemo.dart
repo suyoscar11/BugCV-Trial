@@ -1,4 +1,5 @@
 import 'package:finance_app/screens/DoctorScreen.dart';
+
 import 'package:flutter/material.dart';
 import 'package:finance_app/Homepage.dart';
 import 'package:finance_app/SignUp.dart';
@@ -93,7 +94,7 @@ class _LoginDemoState extends State<LoginDemo> {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (_) => const SignUp()));
                   })),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Row(

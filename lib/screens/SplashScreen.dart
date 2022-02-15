@@ -1,4 +1,4 @@
-import 'package:finance_app/screens/LoginDemo.dart';
+import 'package:finance_app/screens/Menu.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -16,9 +16,9 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   _navigatetohome() async {
-    await Future.delayed(Duration(seconds: 3), () {});
+    await Future.delayed(const Duration(seconds: 3), () {});
     Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => LoginDemo()));
+        context, MaterialPageRoute(builder: (context) => const Menu()));
   }
 
   @override
@@ -33,11 +33,9 @@ class _SplashScreenState extends State<SplashScreen> {
                 height: 150,
                 width: 200,
                 child: Image.asset('asset/images/Logo2.png')),
-            Container(
-              child: const Text(
-                '',
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-              ),
+            const Text(
+              '',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
           ],
         ),
