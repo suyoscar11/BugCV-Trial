@@ -1,3 +1,4 @@
+import 'package:finance_app/screens/LoginDemo.dart';
 import 'package:flutter/material.dart';
 import 'DoctorHomePage.dart';
 
@@ -168,7 +169,7 @@ class _DoctorScreenState extends State<DoctorScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (_) => const DoctorHomePage()));
+                                  builder: (_) => DoctorHomepage()));
                         },
                         child: const Text(
                           'Login',

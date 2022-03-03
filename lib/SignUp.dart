@@ -1,6 +1,5 @@
+import 'package:finance_app/Homepage.dart';
 import 'package:flutter/material.dart';
-
-import 'Homepage.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);
@@ -29,9 +28,9 @@ class _SignUpState extends State<SignUp> {
       autofocus: false,
       controller: firstNameEditingController,
       keyboardType: TextInputType.name,
-      //Validator: (){},
+      validator: (v) {},
       onSaved: (value) {
-        firstNameEditingController.text = 'value';
+        firstNameEditingController.text = '$value';
       },
       textInputAction: TextInputAction.next,
       decoration: const InputDecoration(
@@ -65,9 +64,8 @@ class _SignUpState extends State<SignUp> {
       autofocus: false,
       controller: emailEditingController,
       keyboardType: TextInputType.emailAddress,
-      //Validator: (){},
       onSaved: (value) {
-        emailEditingController.text = 'value';
+        emailEditingController.text = '$value';
       },
       textInputAction: TextInputAction.next,
       decoration: const InputDecoration(
@@ -83,7 +81,6 @@ class _SignUpState extends State<SignUp> {
       autofocus: false,
       controller: passwordEditingController,
       obscureText: true,
-      //Validator: (){},
       onSaved: (value) {
         passwordEditingController.text = 'value';
       },

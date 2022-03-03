@@ -1,3 +1,4 @@
+import 'package:finance_app/screens/DoctorScreen.dart';
 import 'package:finance_app/screens/LoginDemo.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,7 @@ class _MenuState extends State<Menu> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.purple,
+        backgroundColor: Colors.pinkAccent,
         body: Column(children: <Widget>[
           Container(
             height: 265,
@@ -64,6 +65,8 @@ class _MenuState extends State<Menu> {
                   setState(() {
                     firstvalue = value1!;
                     secondvalue = false;
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => LoginDemo()));
                   });
                 }),
             const Padding(padding: EdgeInsets.fromLTRB(60, 10, 10, 10)),
@@ -80,33 +83,12 @@ class _MenuState extends State<Menu> {
                     () {
                       secondvalue = value2!;
                       firstvalue = false;
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (_) => DoctorScreen()));
                     },
                   );
                 }),
           ]),
-          const SizedBox(
-            height: 55,
-          ),
-          Container(
-              height: 50,
-              width: 250,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25),
-                  color: Colors.orange),
-              child: TextButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (_) => LoginDemo(),
-                      ));
-                },
-                child: const Text('Continue',
-                    style: TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.normal,
-                        color: Colors.white)),
-              ))
         ]));
   }
 }
